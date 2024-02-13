@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add styled components creation (regular & with data-testid)
 - Add Boolean config to allow changing from AnyElementPropsType to AnyElementType
 
+## [0.0.2] - 2024-02-13
+
+### Fixed
+
+- Minimal VS Code compatible version
+
 ## [0.0.1] - 2024-02-13
 
 ### Added
