@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Add service snippet
-- Add resolver snippet
-- Add handlers snippet
-- Add styled components creation (regular & with data-testid)
-- Add Boolean config to allow changing from AnyElementPropsType to AnyElementType
+- Add service snippets
+- Add resolver snippets
+- Add handlers snippets
+- Add boolean flag to configs to allow changing Types definition from AnyElement*PropsType* to AnyElement*Type*
+
+## [0.0.3] - 2024-02-13
+
+### Added
+
+- Styled Components: Exports a new styled component
+- Styled Components: Exports a new styled component with testId
+- Styled Components: Use { theme } inside a styled-component
 
 ## [0.0.2] - 2024-02-13
 
@@ -24,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Styled Components: Import styled from 'styled-components'
-- Styled Components: Use props inside styled-component
+- Styled Components: Use props inside a styled-component
 - React Hooks: useState hook
 - React Hooks: useEffect hook
 - React Hooks: useRef hook

@@ -1,5 +1,5 @@
 {
-  // Styled components
+  // Styled Components
 	"Import styled-components": {
     "scope": "typescript, typescriptreact",
     "prefix": "isc",
@@ -9,12 +9,40 @@
     ],
     "description": "Import styled from 'styled-components'"
   },
+  "Export styled component": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["sc", "esc"],
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE/(.*)\\..+$/${1:/pascalcase}/}}$2Styled = styled.${3}`",
+      "\t$0",
+      "`;"
+    ],
+    "description": "Exports a new styled component"
+  },
+  "Export styled component with testId": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["scti", "escti"],
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE/(.*)\\..+$/${1:/pascalcase}/}}$2Styled = styled.${3}.attrs(({ testId }: TestIdPropsType) => ({",
+      "\t...(testId ? { 'data-testid': testId } : {}),",
+      "}))`",
+      "\t$0",
+      "`;"
+    ],
+    "description": "Exports a new styled component with testId"
+  },
   "Use props inside styled-component": {
       "scope": "typescript, typescriptreact",
       "prefix": "scp",
       "body": "${props => props.$1};",
-      "description": "Use props inside styled-component"
+      "description": "Use props inside a styled-component"
   },
+  "Use { theme } inside styled-component": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["theme", "sct"],
+    "body": "${({ theme }) => theme$0}",
+    "description": "Use { theme } inside a styled-component"
+},
   // React Hooks
   "useState": {
       "scope": "typescript, typescriptreact",
@@ -34,7 +62,7 @@
       "body": ["const $1 = useRef<ElementRef<${2:\"div\"}>>(${3:null});$0"],
       "description": "useRef() hook"
   },
-  // React Componets
+  // React Components
   "Create RFC": {
       "scope": "typescriptreact",
       "prefix": "rfc",

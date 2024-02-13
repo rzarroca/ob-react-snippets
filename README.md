@@ -9,7 +9,10 @@ This is an open source project. Please, feel free to fork it or make your own PR
 | Snippet        | Renders                                       |
 | -------------- | --------------------------------------------  |
 | isc            | Import styled from 'styled-components'        |
-| scp            | Use props inside styled-component             |
+| sc, esc        | Exports a new styled component                |
+| scti, escti    | Exports a new styled component with testId    |
+| scp            | Use props inside a styled-component           |
+| theme, sct     | Use { theme } inside a styled-component       |
 | ust            | useState() hook                               |
 | uef            | useEffect() hook                              |
 | urf, uref      | useRef() hook                                 |
