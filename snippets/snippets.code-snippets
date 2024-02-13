@@ -1,0 +1,78 @@
+{
+  // Styled components
+	"Import styled-components": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "isc",
+    "body": [
+      "// Vendors",
+      "import styled from 'styled-components';",
+    ],
+    "description": "Import styled from 'styled-components'"
+  },
+  "Use props inside styled-component": {
+      "scope": "typescript, typescriptreact",
+      "prefix": "scp",
+      "body": "${props => props.$1};",
+      "description": "Use props inside styled-component"
+  },
+  // React Hooks
+  "useState": {
+      "scope": "typescript, typescriptreact",
+      "prefix": "ust",
+      "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);$0",
+      "description": "useState() hook"
+  },
+  "useEffect": {
+      "scope": "typescript, typescriptreact",
+      "prefix": "uef",
+      "body": ["useEffect(() => {", "\t${0}", "}, []);"],
+      "description": "useEffect() hook"
+  },
+  "useRef": {
+      "scope": "typescript, typescriptreact",
+      "prefix": ["urf", "uref"],
+      "body": ["const $1 = useRef<ElementRef<${2:\"div\"}>>(${3:null});$0"],
+      "description": "useRef() hook"
+  },
+  // React Componets
+  "Create RFC": {
+      "scope": "typescriptreact",
+      "prefix": "rfc",
+      "body": [
+          "// Vendors",
+          "import React, { FC } from 'react';",
+          "// Enumerations", "// Components", "// Constants", "// Styles", "// Translations", "// Types",
+          "import { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType } from './types/${TM_FILENAME_BASE/(.*)/$1/}.type'",
+          "\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}: FC<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType> = ({}) => {",
+          "\treturn (",
+          "\t\t<div>",
+          "\t\t\t$0",
+          "\t\t</div>",
+          "\t)",
+          "}",
+          "\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
+      ],
+      "description": "Create a functional component"
+  },
+  // Types
+  "Export PropsType": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["ept", "eprt"],
+    "body": [
+      "export type ${1:${TM_FILENAME_BASE/(.*)\\..+$/${1:/pascalcase}/}}PropsType = {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Export a type with PropsType ending"
+  },
+  "Export ReturnType": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["ert"],
+    "body": [
+      "export type ${1:${TM_FILENAME_BASE/(.*)\\..+$/${1:/pascalcase}/}}ReturnType = {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Export a type with ReturnType ending"
+  },
+}
