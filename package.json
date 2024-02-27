@@ -3,7 +3,7 @@
 	"displayName": "OB React Snippets",
 	"description": "A common set of snippets for working on OB's react projects.",
 	"icon": "icon/ob-react-snippets-logo.png",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"publisher": "rzarroca",
 	"repository": {
 		"type": "git",

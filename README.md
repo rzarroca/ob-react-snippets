@@ -19,6 +19,9 @@ This is an open source project. Please, feel free to fork it or make your own PR
 | rfc            | Create a functional component                 |
 | ept, eprt      | Export a type with PropsType ending           |
 | ert            | Export a type with ReturnType ending          |
+| hdg            | Create a new group of handlers                |
+| adh            | Add a new handler                             |
+| hdl            | Create handler function                       |
 
 
 ## Extension Settings

@@ -9,10 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add service snippets
 - Add resolver snippets
-- Add handlers snippets
 - Add boolean flag to configs to allow changing Types definition from AnyElement*PropsType* to AnyElement*Type*
 
-## [0.0.3] - 2024-02-13
+## [0.2.0] - 2024-02-27
+
+- Add handlers snippets
+
+## [0.1.0] - 2024-02-13
 
 ### Added
 

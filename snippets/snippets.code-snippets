@@ -103,4 +103,47 @@
     ],
     "description": "Export a type with ReturnType ending"
   },
+  // Handlers
+  "Create group of Handlers": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["hdg"],
+    "body": [
+      "// Types",
+      "import { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType, ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ReturnType } from './types/${TM_FILENAME_BASE/(.*)/$1/}.type'",
+      "\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({",
+      "\t"
+      "}: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType): ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ReturnType => {",
+      "\treturn {",
+      "\t\t$0",
+      "\t}",
+      "}",
+      "\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
+    ],
+    "description": "Create a new group of handlers"
+  },
+  "Add handler to group": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["adh"],
+    "body": [
+      "handle${1/(.*)/${1:/capitalize}/} = () =>",
+      "\t${1}Handler({",
+      "\t\t$0",
+      "\t}),",
+    ],
+    "description": "Add a new handler"
+  },
+  "Create handler function": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["hdl"],
+    "body": [
+      "\nconst ${1:newHandler} = ({",
+      "\t"
+      "}: ${1}HandlerPropsType): ${1}HandlerReturnType => {",
+      "\t{",
+      "\t\t$0",
+      "\t}",
+      "}",
+    ],
+    "description": "Create handler function"
+  },
 }
