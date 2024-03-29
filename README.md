@@ -6,23 +6,23 @@ This is an open source project. Please, feel free to fork it or make your own PR
 
 ## Snippets
 
-| Snippet        | Renders                                       |
-| -------------- | --------------------------------------------  |
-| isc            | Import styled from 'styled-components'        |
-| sc, esc        | Exports a new styled component                |
-| scti, escti    | Exports a new styled component with testId    |
-| scp            | Use props inside a styled-component           |
-| theme, sct     | Use { theme } inside a styled-component       |
-| ust            | useState() hook                               |
-| uef            | useEffect() hook                              |
-| urf, uref      | useRef() hook                                 |
-| rfc            | Create a functional component                 |
-| ept, eprt      | Export a type with PropsType ending           |
-| ert            | Export a type with ReturnType ending          |
-| hdg            | Create a new group of handlers                |
-| adh            | Add a new handler                             |
-| hdl            | Create handler function                       |
-
+| Snippet     | Renders                                    |
+| ----------- | ------------------------------------------ |
+| isc         | Import styled from 'styled-components'     |
+| sc, esc     | Exports a new styled component             |
+| scti, escti | Exports a new styled component with testId |
+| scp         | Use props inside a styled-component        |
+| theme, sct  | Use { theme } inside a styled-component    |
+| ust         | useState() hook                            |
+| uef         | useEffect() hook                           |
+| urf, uref   | useRef() hook                              |
+| rfc         | Create a functional component              |
+| ept, eprt   | Export a type with PropsType ending        |
+| ert         | Export a type with ReturnType ending       |
+| ers         | Export PropType & ReturnType types         |
+| hds, ghd    | Create a new group of handlers             |
+| adh         | Add a new handler                          |
+| hdr         | Create handler function                    |
 
 ## Extension Settings
 

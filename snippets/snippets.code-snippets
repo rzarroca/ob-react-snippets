@@ -1,12 +1,9 @@
 {
   // Styled Components
-	"Import styled-components": {
+  "Import styled-components": {
     "scope": "typescript, typescriptreact",
     "prefix": "isc",
-    "body": [
-      "// Vendors",
-      "import styled from 'styled-components';",
-    ],
+    "body": ["// Vendors", "import styled from 'styled-components';"],
     "description": "Import styled from 'styled-components'"
   },
   "Export styled component": {
@@ -32,55 +29,61 @@
     "description": "Exports a new styled component with testId"
   },
   "Use props inside styled-component": {
-      "scope": "typescript, typescriptreact",
-      "prefix": "scp",
-      "body": "${props => props.$1};",
-      "description": "Use props inside a styled-component"
+    "scope": "typescript, typescriptreact",
+    "prefix": "scp",
+    "body": "${props => props.$1};",
+    "description": "Use props inside a styled-component"
   },
   "Use { theme } inside styled-component": {
     "scope": "typescript, typescriptreact",
     "prefix": ["theme", "sct"],
     "body": "${({ theme }) => theme$0}",
     "description": "Use { theme } inside a styled-component"
-},
+  },
   // React Hooks
   "useState": {
-      "scope": "typescript, typescriptreact",
-      "prefix": "ust",
-      "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);$0",
-      "description": "useState() hook"
+    "scope": "typescript, typescriptreact",
+    "prefix": "ust",
+    "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);$0",
+    "description": "useState() hook"
   },
   "useEffect": {
-      "scope": "typescript, typescriptreact",
-      "prefix": "uef",
-      "body": ["useEffect(() => {", "\t${0}", "}, []);"],
-      "description": "useEffect() hook"
+    "scope": "typescript, typescriptreact",
+    "prefix": "uef",
+    "body": ["useEffect(() => {", "\t${0}", "}, []);"],
+    "description": "useEffect() hook"
   },
   "useRef": {
-      "scope": "typescript, typescriptreact",
-      "prefix": ["urf", "uref"],
-      "body": ["const $1 = useRef<ElementRef<${2:\"div\"}>>(${3:null});$0"],
-      "description": "useRef() hook"
+    "scope": "typescript, typescriptreact",
+    "prefix": ["urf", "uref"],
+    "body": ["const $1 = useRef<ElementRef<${2:\"div\"}>>(${3:null});$0"],
+    "description": "useRef() hook"
   },
   // React Components
   "Create RFC": {
-      "scope": "typescriptreact",
-      "prefix": "rfc",
-      "body": [
-          "// Vendors",
-          "import React, { FC } from 'react';",
-          "// Enumerations", "// Components", "// Constants", "// Styles", "// Translations", "// Types",
-          "import { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType } from './types/${TM_FILENAME_BASE/(.*)/$1/}.type'",
-          "\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}: FC<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType> = ({}) => {",
-          "\treturn (",
-          "\t\t<div>",
-          "\t\t\t$0",
-          "\t\t</div>",
-          "\t)",
-          "}",
-          "\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
-      ],
-      "description": "Create a functional component"
+    "scope": "typescriptreact",
+    "prefix": "rfc",
+    "body": [
+      "// Vendors",
+      "import React, { FC } from 'react';",
+      "// Enumerations",
+      "// Components",
+      "// Constants",
+      "// Styles",
+      "// Translations",
+      "// Types",
+      "// Utils",
+      "import { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType } from './types/${TM_FILENAME_BASE/(.*)/$1/}.type'",
+      "\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}: FC<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType> = ({}) => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
+    ],
+    "description": "Create a functional component"
   },
   // Types
   "Export PropsType": {
@@ -103,15 +106,29 @@
     ],
     "description": "Export a type with ReturnType ending"
   },
+  "Export Types": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["ets"],
+    "body": [
+      "export type ${1:${TM_FILENAME_BASE/(.*)\\..+$/${1:/pascalcase}/}}PropsType = {",
+      "\t$0",
+      "};",
+      "\nexport type ${1:${TM_FILENAME_BASE/(.*)\\..+$/${1:/pascalcase}/}}ReturnType = {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Export PropType & ReturnType types"
+  },
   // Handlers
   "Create group of Handlers": {
     "scope": "typescript, typescriptreact",
-    "prefix": ["hdg"],
+    "prefix": ["ghd", "hds"],
     "body": [
       "// Types",
       "import { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType, ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ReturnType } from './types/${TM_FILENAME_BASE/(.*)/$1/}.type'",
+      "\n",
       "\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({",
-      "\t"
+      "\t$2",
       "}: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType): ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ReturnType => {",
       "\treturn {",
       "\t\t$0",
@@ -125,25 +142,25 @@
     "scope": "typescript, typescriptreact",
     "prefix": ["adh"],
     "body": [
-      "handle${1/(.*)/${1:/capitalize}/} = () =>",
+      "handle${1/(.*)/${1:/capitalize}/}: () =>",
       "\t${1}Handler({",
       "\t\t$0",
-      "\t}),",
+      "\t}),"
     ],
     "description": "Add a new handler"
   },
   "Create handler function": {
     "scope": "typescript, typescriptreact",
-    "prefix": ["hdl"],
+    "prefix": ["hdr"],
     "body": [
       "\nconst ${1:newHandler} = ({",
-      "\t"
-      "}: ${1}HandlerPropsType): ${1}HandlerReturnType => {",
+      "\t",
+      "}: ${1}PropsType): ${1}ReturnType => {",
       "\t{",
       "\t\t$0",
       "\t}",
-      "}",
+      "}"
     ],
     "description": "Create handler function"
-  },
+  }
 }

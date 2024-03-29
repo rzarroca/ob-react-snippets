@@ -1,35 +1,35 @@
 {
-	"name": "ob-react-snippets",
-	"displayName": "OB React Snippets",
-	"description": "A common set of snippets for working on OB's react projects.",
-	"icon": "icon/ob-react-snippets-logo.png",
-	"version": "0.2.0",
-	"publisher": "rzarroca",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/rzarroca/ob-react-snippets"
-	},
-	"keywords": [
-		"React",
-		"Typescript",
-		"React Snippets"
-	],
-	"engines": {
-		"vscode": "^1.6.3"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "typescript",
-				"path": "./snippets/snippets.code-snippets"
-			},
-			{
-				"language": "typescriptreact",
-				"path": "./snippets/snippets.code-snippets"
-			}
-		]
-	}
+  "name": "ob-react-snippets",
+  "displayName": "OB React Snippets",
+  "description": "A common set of snippets for working on OB's react projects.",
+  "icon": "icon/ob-react-snippets-logo.png",
+  "version": "0.3.0",
+  "publisher": "rzarroca",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rzarroca/ob-react-snippets"
+  },
+  "keywords": [
+    "React",
+    "Typescript",
+    "React Snippets"
+  ],
+  "engines": {
+    "vscode": "^1.6.3"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
 }
