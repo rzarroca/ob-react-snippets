@@ -81,7 +81,7 @@
       "\t\t</div>",
       "\t)",
       "}",
-      "\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
+      "\nexport ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
     ],
     "description": "Create a functional component"
   },
@@ -119,6 +119,12 @@
     ],
     "description": "Export PropType & ReturnType types"
   },
+  "Selected Type": {
+    "scope": "typescript, typescriptreact",
+    "prefix": ["slt"],
+    "body": "type Selected${1:${CLIPBOARD}} = Pick<${1:${CLIPBOARD}}, '$0'>",
+    "description": "Create a SelectedType from copy text"
+  },
   // Handlers
   "Create group of Handlers": {
     "scope": "typescript, typescriptreact",
@@ -129,12 +135,10 @@
       "\n",
       "\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({",
       "\t$2",
-      "}: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType): ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ReturnType => {",
-      "\treturn {",
-      "\t\t$0",
-      "\t}",
-      "}",
-      "\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
+      "}: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}PropsType): ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}ReturnType => ({",
+      "\t$0",
+      "})",
+      "\nexport ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};"
     ],
     "description": "Create a new group of handlers"
   },
@@ -153,12 +157,10 @@
     "scope": "typescript, typescriptreact",
     "prefix": ["hdr"],
     "body": [
-      "\nconst ${1:newHandler} = ({",
+      "\nconst ${1:name}Handler = ({",
       "\t",
-      "}: ${1}PropsType): ${1}ReturnType => {",
-      "\t{",
-      "\t\t$0",
-      "\t}",
+      "}: ${1/(.*)/${1:/capitalize}/}HandlerPropsType): ${1/(.*)/${1:/capitalize}/}HandlerReturnType => {",
+      "\t$0",
       "}"
     ],
     "description": "Create handler function"

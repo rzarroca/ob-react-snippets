@@ -11,9 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add resolver snippets
 - Add boolean flag to configs to allow changing Types definition from AnyElement*PropsType* to AnyElement*Type*
 
+## [0.4.0] - 2025-04-14
+
+- Handlers: Improve _Create group of handlers_ snippet
+- Handlers: Improve _Create handler function_ snippet
+- Types: Add _Selected Type_
+- Remove default exports
+
 ## [0.3.0] - 2024-03-29
 
-- Handlers: Enhace handlers snippets
+- Handlers: Enhance handlers snippets
 - React Components: Add _// Utils_ to Create RFC
 - Types: Add _Export Types_
 

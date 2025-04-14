@@ -20,6 +20,7 @@ This is an open source project. Please, feel free to fork it or make your own PR
 | ept, eprt   | Export a type with PropsType ending        |
 | ert         | Export a type with ReturnType ending       |
 | ers         | Export PropType & ReturnType types         |
+| slt         | Create SelectedType from copy text         |
 | hds, ghd    | Create a new group of handlers             |
 | adh         | Add a new handler                          |
 | hdr         | Create handler function                    |
